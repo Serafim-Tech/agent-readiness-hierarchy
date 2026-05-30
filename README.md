@@ -117,6 +117,12 @@ If you think we've got a layer, an order, or a principle wrong, we want to hear 
 
 ---
 
+## Contributing
+
+This is a canonical, openly-licensed framework, and it improves through use and challenge. Corrections, worked examples, and translations are all welcome — see **[CONTRIBUTING.md](CONTRIBUTING.md)** for how to propose them. Small fixes can go straight to a pull request; changes to the layers, the scale, or the principles start as an issue so we can discuss them first.
+
+---
+
 ## Origins & attribution
 
 The Agent-Readiness Hierarchy is an original framework developed by Serafim Tech. It synthesizes and builds on publicly available thinking about agentic commerce, including McKinsey & QuantumBlack's *The Agentic Commerce Opportunity* (October 2025) and Serafim Tech's own diagnostic work. Those sources are cited as intellectual influences; the layered hierarchy, the maturity scale, and the governing principles are Serafim Tech's own contribution, and it is this contribution that is offered here under CC BY 4.0.
@@ -125,7 +131,7 @@ The Agent-Readiness Hierarchy is an original framework developed by Serafim Tech
 
 ## How to cite
 
-> Serafim Tech (2026). *The Agent-Readiness Hierarchy: An open framework for agentic-commerce readiness*, v1.0. Licensed under CC BY 4.0. Available at serafimtech.io.
+> Serafim Tech (2026). *The Agent-Readiness Hierarchy: An open framework for agentic-commerce readiness*, v1.0. Licensed under CC BY 4.0. Available at [serafimtech.io](https://serafimtech.io).
 
 ---
 
@@ -133,13 +139,14 @@ The Agent-Readiness Hierarchy is an original framework developed by Serafim Tech
 
 Serafim Tech builds the capability layer for agentic commerce — composable, agent-readable commerce primitives that let merchants be found, understood, and transacted with by AI agents. We publish this framework openly because a shared standard for agent-readiness helps the whole ecosystem mature, merchants and builders alike.
 
+Learn more at **[serafimtech.io](https://serafimtech.io)**.
+
 **Serafim Tech Limited**
 Registered office: 124–128 City Road, Islington, London, EC1V 2NX, United Kingdom
 Company No. 12884078 · VAT 359617656 · Registered in England & Wales
-serafimtech.io
 
-*Note: Serafim Tech Limited (agentic commerce, serafimtech.io) is unrelated to any similarly named gaming or hardware brand.*
+*Note: Serafim Tech Limited (agentic commerce, [serafimtech.io](https://serafimtech.io)) is unrelated to any similarly named gaming or hardware brand.*
 
 ---
 
-*© 2026 Serafim Tech Limited (Company No. 12884078, registered in England & Wales). This framework is released under CC BY 4.0 — free to use, adapt, and share with attribution. "The Agent-Readiness Hierarchy" name and the Serafim Tech mark may be used to refer to this framework and accurate adaptations of it.*
+*© 2026 Serafim Tech Limited. Licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). "The Agent-Readiness Hierarchy" name and the Serafim Tech mark may be used to refer to this framework and accurate adaptations of it.*
