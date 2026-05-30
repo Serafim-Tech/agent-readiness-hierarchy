@@ -30,14 +30,14 @@ An AI agent acting for a shopper engages with five things, and lower layers **we
                   ┌─────────────────────────┐
                   │   5 · LEVERAGE          │   Can I capture value & learn?
                 ┌─┴─────────────────────────┴─┐
-                │   4 · TRUST                 │   Can the transaction be trusted?
+                │     4 · TRUST               │   Can the transaction be trusted?
               ┌─┴─────────────────────────────┴─┐
-              │   3 · TRANSACTABILITY           │   Can an agent actually buy?
+              │       3 · TRANSACTABILITY       │   Can an agent actually buy?
             ┌─┴─────────────────────────────────┴─┐
-            │   2 · COMPREHENSION                 │   Can it understand what I sell?
+            │         2 · COMPREHENSION           │   Can it understand what I sell?
           ┌─┴─────────────────────────────────────┴─┐
-          │   1 · PRESENCE                          │   Can an agent find & reach me?
-          └───────────────────────────────────────────┘
+          │           1 · PRESENCE                  │   Can an agent find & reach me?
+          └─────────────────────────────────────────┘
                           build up ↑
 ```
 
