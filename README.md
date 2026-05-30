@@ -24,7 +24,7 @@ It is deliberately open. A shared, free vocabulary for agent-readiness is more u
 
 ## The core idea
 
-An AI agent acting for a shopper must clear five things, **in order**, before a merchant earns the sale. Each is a **layer**, and each **gates** the one above it. There's no point optimizing promotions for agents (Layer 5) if an agent can't parse your catalog (Layer 2). So the hierarchy is read — and fixed — **from the bottom up**.
+An AI agent acting for a shopper engages with five things, and lower layers **weight** the value of higher ones: a brilliant promotion an agent can't parse (Layer 5 on a weak Layer 2) isn't worth zero, but it's worth far less than it should be. The layers don't strictly *block* each other — a merchant can work several in parallel — but effort spent high in the stack pays off only as far as the layers beneath it support it. So the hierarchy is generally read — and prioritized — **from the bottom up**.
 
 ```
                   ┌─────────────────────────┐
@@ -41,21 +41,21 @@ An AI agent acting for a shopper must clear five things, **in order**, before a 
                           build up ↑
 ```
 
-| Layer | The question the agent is asking | What lives here |
-|---|---|---|
-| **5 · Leverage** | Can I (the merchant) capture value and learn? | Agent-readable promotions, loyalty & bundles; agent attribution & observability; new monetization; the data feedback loop |
-| **4 · Trust** | Can the transaction be trusted? | Delegated authorization, Know-Your-Agent posture, transparent returns & substitution, dependability signals |
-| **3 · Transactability** | Can an agent actually buy? | Cart accepts agent line items, computes totals, returns a working checkout URL; payment handlers; fulfillment options |
-| **2 · Comprehension** | Can it understand what I sell? | Catalog quality, structured data, variant resolution, semantic metadata, localization |
-| **1 · Presence** | Can an agent find and reach me at all? | Discovery profile reachable & parseable; live agent endpoint; agentic channels enabled |
+| Layer | The question the agent is asking | What lives here | Mostly in your control? |
+|---|---|---|---|
+| **5 · Leverage** | Can I (the merchant) capture value and learn? | Agent-readable promotions, loyalty & bundles; agent attribution & observability; new monetization; the data feedback loop | Yes |
+| **4 · Trust** | Can the transaction be trusted? | Delegated authorization, Know-Your-Agent posture, transparent returns & substitution, dependability signals | Partly — shared with payment networks, identity standards & regulators |
+| **3 · Transactability** | Can an agent actually buy? | Cart accepts agent line items, computes totals, returns a working checkout URL; payment handlers; fulfillment options | Mostly |
+| **2 · Comprehension** | Can it understand what I sell? | Catalog quality, structured data, variant resolution, semantic metadata, localization | Yes |
+| **1 · Presence** | Can an agent find and reach me at all? | Discovery profile reachable & parseable; live agent endpoint; agentic channels enabled | Partly — shared with your platform & the protocol layer |
 
-The base is widest on purpose: presence is the broadest foundation and gates everything; each layer narrows because fewer merchants get that far. **Your weakest low layer is your real bottleneck** — a brilliant Layer 5 sitting on a broken Layer 1 scores zero in practice.
+The base is widest on purpose: presence is the broadest foundation that everything else leans on, and each layer narrows because fewer merchants get that far. **Your weakest low layer is usually your real bottleneck** — a brilliant Layer 5 sitting on a broken Layer 1 delivers a fraction of its potential in practice.
 
 ---
 
 ## The maturity scale
 
-Score **each layer 0–3**. This is what turns the hierarchy from a diagram into a diagnostic.
+Score **each layer 0–3**. This is what turns the hierarchy from a diagram into a diagnostic. The scoring is still partly judgment-based today; a detailed, checkable rubric for each layer at each score is the priority for the next version (see *Known limitations*).
 
 | Score | State | Meaning |
 |---|---|---|
@@ -76,7 +76,7 @@ Score **each layer 0–3**. This is what turns the hierarchy from a diagram into
 These keep the framework strategic, not merely technical. They apply at every layer.
 
 **1 · Agent-ready, not agent-dependent.**
-Expose your capabilities to agents *without* surrendering the customer. Stay the merchant of record; retain identity, payment authorization, and the post-purchase relationship and data. Being readable to agents must not mean becoming an interchangeable supplier inside someone else's marketplace.
+Expose your capabilities to agents while fighting to keep what matters: stay the merchant of record where you can, and protect identity, payment authorization, and the post-purchase relationship and data. The pressure toward disintermediation is real and you may not win every inch of it — but readiness should be a deliberate trade, not a surrender of the customer relationship by default.
 
 **2 · The same machinery serves humans and agents.**
 Every layer, done well, also improves the human experience — clean data, a cart that always computes totals, transparent returns, exposed promotions. The work is therefore never wasted, even if agentic adoption arrives slower than predicted. Build for the agent; the human benefits too.
@@ -90,6 +90,30 @@ Every layer, done well, also improves the human experience — clean data, a car
 3. **Fix bottom-up.** Bring each layer to ≥2 before investing above it.
 4. **Optimize selectively.** Push Comprehension (2) and Leverage (5) toward 3 — that's your competitive edge.
 5. **Re-score and repeat.** Readiness is a loop, not a one-time project; protocols and agents keep moving.
+
+---
+
+## Status: a working model, not settled science
+
+This is **version 1.0** — a structured, reasoned model, not yet an empirically validated instrument. We have not yet published data proving that a high readiness score *causes* better agent conversion. We believe it does, and we're committing to test it openly: as agentic traffic grows, we'll publish whether readiness scores actually predict agent-driven revenue, and revise the framework where the data disagrees with the theory. Treat the score as a well-reasoned hypothesis to act on, not a law to trust blindly.
+
+**A note on our interest.** Serafim Tech builds commercial tools in this space, and this framework maps onto problems our products help solve. We've published it openly, under a permissive license, precisely so it's useful and verifiable *independent of* our products — you can apply the whole framework without ever touching anything we sell. We think being upfront about this makes the work more trustworthy, not less.
+
+---
+
+## Known limitations & how to challenge this
+
+We publish the framework's weaknesses alongside the framework, because a model you can argue with is more useful than one that pretends to be finished. The strongest objections, and our current responses:
+
+- **"The layers don't really stack in a strict order."** Correct — and v1.0 reflects this: lower layers *weight* the value of higher ones rather than hard-blocking them. A merchant can and often should work several in parallel. The bottom-up ordering is a prioritization heuristic, not a law of nature.
+- **"Trust is the foundation of the whole category, so why is it Layer 4?"** Fair tension. We distinguish *transaction-level* trust (delegated authorization, returns, dependability — what a merchant can act on, placed at Layer 4) from *category-level* trust (will consumers delegate purchasing to agents at all — a macro precondition outside any single merchant's control). Reasonable people may redraw this; we'd welcome the argument.
+- **"It mixes things merchants control with things they don't."** True, which is why each layer is now annotated for control. Presence and Trust are partly ecosystem- and platform-dependent. The framework tells you where your effort moves the needle versus where you're waiting on others.
+- **"The 0–3 scale is subjective."** Currently, yes. A concrete per-layer rubric is the top priority for v1.1. Until then, treat scores as directional.
+- **"A single hierarchy is category-blind."** The *layers* are intended to be universal; the *targets within each layer* are not. A luxury brand optimizes Trust and brand-legible Comprehension; a commodity reseller optimizes Transactability and Leverage. High-consideration categories rationally plateau lower on agent-delegation than commodities do.
+- **"The layers overlap."** They do. Structured data serves both Comprehension and Transactability; promotions touch both Comprehension and Leverage. Placement reflects the *primary* question a capability answers, not an exclusive home.
+- **"A pyramid makes any idea look more rigorous than it is."** A fair caution about frameworks generally. We've tried to claim only what we can defend — this is a useful lens, not the discovered structure of agentic commerce. Hold us to that.
+
+If you think we've got a layer, an order, or a principle wrong, we want to hear it. The canonical version improves through challenge.
 
 ---
 
