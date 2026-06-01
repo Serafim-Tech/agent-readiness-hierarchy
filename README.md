@@ -22,6 +22,17 @@ It is deliberately open. A shared, free vocabulary for agent-readiness is more u
 
 ---
 
+## In this repository
+
+| File | What it's for |
+| --- | --- |
+| **[SCORECARD.md](SCORECARD.md)** | A fillable template — score your store and read off bottleneck + readiness. |
+| **[WORKED-EXAMPLE.md](WORKED-EXAMPLE.md)** | A fictional store scored end-to-end, showing how scores become a decision. |
+| **[LAYER-CHECKS.md](LAYER-CHECKS.md)** | Objective pass/fail criteria for every score at every layer. |
+| **[OPEN-QUESTIONS.md](OPEN-QUESTIONS.md)** | The framework's open questions, known limitations, and roadmap — where it's unfinished and where it's going. |
+
+---
+
 ## The core idea
 
 An AI agent acting for a shopper engages with five things, and lower layers **weight** the value of higher ones: a brilliant promotion an agent can't parse (Layer 5 on a weak Layer 2) isn't worth zero, but it's worth far less than it should be. The layers don't strictly *block* each other — a merchant can work several in parallel — but effort spent high in the stack pays off only as far as the layers beneath it support it. So the hierarchy is generally read — and prioritized — **from the bottom up**.
